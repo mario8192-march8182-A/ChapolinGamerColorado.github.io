@@ -3,48 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <title>Fórum da Vila Gamer</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #eee;
-      padding: 20px;
+    .formulario {
+      background-color: #222;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
     }
-    h1, h2 {
-      color: #00ffcc;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    input, textarea {
+    .formulario input,
+    .formulario textarea {
       width: 100%;
       padding: 10px;
+      margin-top: 5px;
       border-radius: 5px;
       border: none;
-      margin-top: 5px;
+      background-color: #1f1f1f;
+      color: #eee;
     }
-    button {
+    .formulario button {
       background-color: #00ffcc;
       color: #000;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      margin-top: 10px;
     }
-    .topic {
-      background-color: #222;
+    .topico {
+      background-color: #333;
       padding: 15px;
       border-radius: 8px;
       margin-bottom: 20px;
     }
-    .comment {
-      background-color: #333;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 10px;
+    .topico h3 {
+      color: #ffcc00;
+      margin-bottom: 5px;
+    }
+    .topico p {
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
 
-  <h1>💬 Fórum da Vila Gamer
+  <header>
+    <h1>💬 Fórum da Vila Gamer</h1>
+    <p>Poste suas ideias, dúvidas, zoeiras e segredos burritescos sobre jogos clássicos!</p>
+  </header>
+
+  <main>
+
+    <div class="formulario">
+      <h2>🧵 Criar Novo Tópico</h2>
+      <form id="formTopico">
+        <label for="nomeUsuario">Seu Nome:</label>
+        <input type="text" id="nomeUsuario" placeholder="Ex: ChapolinGamer">
+
+        <label for="tituloTopico">Título do Tópico:</label>
+        <input type="text" id="tituloTopico" placeholder="Ex: Como editar Sonic CD no Android">
+
+        <label for="mensagemTopico">Mensagem:</label>
+        <textarea id="mensagemTopico" rows="5" placeholder="Compartilhe sua dúvida, dica ou zoeira..."></textarea>
+
+        <button type="submit">📤 Postar Tópico</button>
+      </form>
+    </div>
+
+    <h2>📂 Tópicos Recentes</h2>
+    <div id="listaTopicos">
+      <!-- Tópicos postados aparecerão aqui -->
+      <div class="topico">
+        <h3>🚗 Modding no El Chavo Kart</h3>
+        <p><strong>ChapolinGamer:</strong> Os modelos são .OBJ e dá pra abrir até no Bloco de Notas 🤣</p>
+      </div>
+
+      <div class="topico">
+        <h3>🌀 Sonic 1 Android</h3>
+        <p><strong>RetroFan:</strong> Use o Retro Engine e edite os arquivos .rsdk.xmf com ferramentas burritescas!</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Feito por Chapolin Gamer © 2025</p>
+  </footer>
+
+  <script src="forum.js"></script>
+
+</body>
+</html>
